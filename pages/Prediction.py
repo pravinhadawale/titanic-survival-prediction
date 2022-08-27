@@ -1,9 +1,9 @@
 import pickle as pkl
 import streamlit as st
 import numpy as np
-from sklearn.ensemble import GradientBoostingClassifier
 
-model = pkl.load(open("sgb.sav","rb"))
+
+model = pkl.load(open("rd_clf.pkl","rb"))
 
 st.title("Survival Prediction")
 
