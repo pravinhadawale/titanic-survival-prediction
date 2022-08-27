@@ -23,7 +23,7 @@ fare = np.log(f)
 e = st.selectbox("Port of Embarkation ",options = ["Cherbourg","Queenstone","Southampton"])
 embarked = ["Cherbourg","Queenstone","Southampton"].index(e)
 
-model = pkl.load(open("sgb.pkl","rb"))
+model = pkl.load(open("sgb.sav","rb"))
 
 if st.button("Predict Your Chances ?"):
     x = model.predict(np.array([[pclass,gender,age,sp,pa,fare,embarked]]))[0]
