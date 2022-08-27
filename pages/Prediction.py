@@ -23,14 +23,14 @@ fare = np.log(f)
 e = st.selectbox("Port of Embarkation ",options = ["Cherbourg","Queenstone","Southampton"])
 embarked = ["Cherbourg","Queenstone","Southampton"].index(e)
 
-model = pkl.load(open("/content/drive/MyDrive/Titanic/sgb.pkl","rb"))
+model = pkl.load(open("sgb.pkl","rb"))
 
 if st.button("Predict Your Chances ?"):
     x = model.predict(np.array([[pclass,gender,age,sp,pa,fare,embarked]]))[0]
     
     if x == 1:
-        st.image("/content/drive/MyDrive/Titanic/Survived image.jpg")
+        st.image("Survived image.jpg")
         st.write("***congratulation !!!....*** **You probably would have made it!**")
     elif x == 0:
-        st.image("/content/drive/MyDrive/Titanic/rip_last.png")
+        st.image("rip_last.png")
         st.write("***Better Luck Next time !!!!...*** **you're probably Ended up like 'Jack'**")
