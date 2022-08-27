@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 
 
-model = pkl.load(open("rd_clf.pkl","rb"))
+model = pkl.load(open("rd_clf_1.pkl","rb"))
 
 st.title("Survival Prediction")
 
